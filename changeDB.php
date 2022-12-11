@@ -5,6 +5,7 @@ if (isset($_SESSION['userid']) && isset($_SESSION['username'])) {
 
     include "connect.php";
 
+    
 if (isset($_POST['op']) && isset($_POST['np'])
     && isset($_POST['c_np'])) {
 
@@ -40,6 +41,7 @@ if (isset($_POST['op']) && isset($_POST['np'])
         $result = mysqli_query($conn, $sql);
         if(mysqli_num_rows($result) === 1){
         	
+            
         	$sql_2 = "UPDATE users
         	          SET password='$np'
         	          WHERE userid='$id'";
